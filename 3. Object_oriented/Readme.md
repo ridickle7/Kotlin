@@ -3,12 +3,16 @@
 # 3. 객체 지향
 
 ## 3.1 class
+
+## 3.1.1 정의
  - class라는 이름으로 선언함
  - header, body 생략 가능
    <pre><code>// class 사용 example
    class invoice(number : Int){}
    class Empty
    </code></pre>
+   
+## 3.1.2 정의
  - 클래스별로 1개만 기본 생성자를 가질 수 있음
    <pre><code>// constructor example
    class Person constructor(firstName : String) {}
@@ -74,14 +78,15 @@
    매개변수 X, 가시성 public  
    (가시성을 없애려면, 빈 기본생성자를 선언해야 함)  
    ex> class DontCreateMe private constructor() {}  
+## 3.1.3 인스턴스 
  - 코틀린은 new 키워드가 없음
    <pre><code>// instance 생성 example
    val invoice = Invoice()
 	val customer = Customer(“Joe Smith”)
    </code></pre>
  - 클래스는 아래의 것들을 포함할 수 있음
-		> constructor / init {}
-		> function
-		> properties
-		> nested and inner classes
-		> object declaration	
+   > constructor / init {}  
+   > function  
+   > properties  
+   > nested and inner classes  
+   > object declaration	 
