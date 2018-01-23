@@ -202,8 +202,8 @@ fun sum(obj? : Any): Int? {
      fun describe(obj : Any) : String {
      	when (obj){
 		1		-> "One"		// 숫자 1인 경우, One 스트링 리턴
-		"Hello"		-> "Greeting"		// Hello 스트링인 경우, Greeting 스트링 리턴
-		is Long		-> "Long"		//
+		"Hello"	-> "Greeting"		// Hello 스트링인 경우, Greeting 스트링 리턴
+		is Long	-> "Long"		//
 		!is String	-> "Not a String"	//
 		else		-> {			// 중괄호처리도 가능
 			println("Unknown")
