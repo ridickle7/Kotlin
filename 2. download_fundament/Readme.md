@@ -24,7 +24,7 @@ fun sum(a:Int, b:Int, total:Int): Int{
 // 1_2. return 없음
 fun sum(a:Int, b:Int, total:Int) = a + b + total;
 
-// 2. ? 사용 가능
+// 2. '?' 사용 가능
 fun sum(str: String): Int? {
 	// 정수가 아닌 경우 NULL 을 리턴 (?를 적는다)
 }
@@ -45,11 +45,11 @@ fun sum(obj? : Any): Int? {
 #### 2.1 변수 선언 방식
    - 1. val : 읽기전용 변수, 1회만 선언 가능 (final과 유사)  
      <pre><code>// 선언 방법
-     val a : Int = 3				// 선언 후 할당
-     val b = 2						// Int 추론 후 할당
+     val a : Int = 3			// 선언 후 할당
+     val b = 2			// Int 추론 후 할당
      val c : Int? = parseInt(a)	// parseInt(a) 가 정수가 아닌 경우 Null 할당
-     val d : Int						// compile error (초기화 필요)
-     a = 4							// compile error (읽기 전용)
+     val d : Int			// compile error (초기화 필요)
+     a = 4				// compile error (읽기 전용)
      </code></pre>
      
    - 2. var : mutable 변수
@@ -65,15 +65,15 @@ fun sum(obj? : Any): Int? {
      
    - boxing
      <pre><code>// boxing example
-     var a: Int = 10000	// int
-     var b: Int = 10000	// int	
+     var a: Int = 10000		// int
+     var b: Int = 10000		// int	
      println(“a === b : ${a === b}”)	// true
-     println(“a == b : ${a == b}”)		// true
+     println(“a == b : ${a == b}”)	// true
      
-     var a: Int = 10000	// int
-     var b: Int? = 10000	// Integer
+     var a: Int = 10000		// int
+     var b: Int? = 10000		// Integer
      println(“a === b : ${a === b}”)	// false
-     println(“a == b : ${a == b}”)		// true</code></pre>
+     println(“a == b : ${a == b}”)	// true</code></pre>
      
    - 1. Numbers  
      말 그대로 숫자  
@@ -83,7 +83,7 @@ fun sum(obj? : Any): Int? {
      <pre><code>// example
      val a : Int = 3
      
-     val b : Long = a			// O
+     val b : Long = a		// O
      val b : Long = a.toLong()	// O
      </code></pre>
      
@@ -201,11 +201,11 @@ fun sum(obj? : Any): Int? {
      <pre><code>// When 문법 활용 예제
      fun describe(obj : Any) : String {
      	when (obj){
-		1			-> "One"				// 숫자 1인 경우, One 스트링 리턴
-		"Hello"	-> "Greeting"			// Hello 스트링인 경우, Greeting 스트링 리턴
-		is Long	-> "Long"				//
-		!is String-> "Not a String"	//
-		else		-> {					// 중괄호처리도 가능
+		1		-> "One"		// 숫자 1인 경우, One 스트링 리턴
+		"Hello"		-> "Greeting"		// Hello 스트링인 경우, Greeting 스트링 리턴
+		is Long		-> "Long"		//
+		!is String	-> "Not a String"	//
+		else		-> {			// 중괄호처리도 가능
 			println("Unknown")
 			"Unknown"
 		}
@@ -233,7 +233,7 @@ fun sum(obj? : Any): Int? {
 	  > loop@ -> 레이블 선언  
 	  > @loop -> 레이블 적용  
    <pre><code> // label 사용 example
-   array.forEach label@ {		// label 활용 안할 시, for문이 아닌 가장 가까운 바깥 함수가 종료됨
+   array.forEach label@ {	// label 활용 안할 시, for문이 아닌 가장 가까운 바깥 함수가 종료됨
      if(it == 1) return @label
      print(it)
    }
